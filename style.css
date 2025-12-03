@@ -15,11 +15,6 @@
     display: flex;
 }
 
-.row-div div {
-    width: 30px;
-    height: 30px;
-}
-
 .row-div .hovered {
     background-color: aqua;
 }

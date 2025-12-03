@@ -3,6 +3,7 @@ const resizeButton = document.querySelector(".btn-resize");
 
 let rows = [];
 let rowDiv;
+let canvaWidth = 600;
 
 
 resizeButton.addEventListener("click", () => {
@@ -20,22 +21,34 @@ resizeButton.addEventListener("click", () => {
 })
 
 
-for (let rowIndex = 0; rowIndex < 16; rowIndex++) {
-    rowDiv = document.createElement("div");
+function makeGrid(canvaBlockSize, canvaWidth) {
+    
+    let blockWidth = canvaWidth / canvaBlockSize;
 
-    rowDiv.className = "row-div";
+    console.log(`${blockWidth} = ${canvaWidth} / ${canvaBlockSize}`);
+    
 
-    for (let blockIndex = 0; blockIndex < 16; blockIndex++) {
-        let blockItem = document.createElement("div");
+    for (let rowIndex = 0; rowIndex < canvaBlockSize; rowIndex++) {
+        rowDiv = document.createElement("div");
+    
+        rowDiv.className = "row-div";
+    
+        for (let blockIndex = 0; blockIndex < canvaBlockSize; blockIndex++) {
+            let blockItem = document.createElement("div");
 
-        blockItem.addEventListener("mouseenter", () => {
-            blockItem.style.backgroundColor = 'red';
-        })
-
-        rowDiv.appendChild(blockItem);
+            blockItem.style.width = `${blockWidth}px`;
+            blockItem.style.height = `${blockWidth}px`;
+    
+            blockItem.addEventListener("mouseenter", () => {
+                blockItem.style.backgroundColor = 'blue';
+            })
+    
+            rowDiv.appendChild(blockItem);
+        }
+        
+        canvasDiv.appendChild(rowDiv);
     }
     
-    canvasDiv.appendChild(rowDiv);
 }
 
 function askGridSize() {
@@ -56,6 +69,5 @@ function askGridSize() {
     return size;
 }
 
-function makeNewGrid(size) {
-    
-}
+
+makeGrid(16, canvaWidth);
