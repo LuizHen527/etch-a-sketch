@@ -16,6 +16,9 @@ resizeButton.addEventListener("click", () => {
         window.alert("Type a valid number");
     } else if (size < 1 || size > 100) {
         window.alert("Type a number between 1 and 100");
+    } else {
+        removeCurrentGrid();
+        makeGrid(size, canvaWidth);
     }
     
 })
@@ -49,6 +52,13 @@ function makeGrid(canvaBlockSize, canvaWidth) {
         canvasDiv.appendChild(rowDiv);
     }
     
+}
+
+function removeCurrentGrid() {
+
+    while (canvasDiv.lastChild) {
+        canvasDiv.removeChild(canvasDiv.lastChild);
+    }
 }
 
 function askGridSize() {
