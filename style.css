@@ -20,6 +20,6 @@
     height: 30px;
 }
 
-.row-div div:hover {
+.row-div .hovered {
     background-color: aqua;
 }
