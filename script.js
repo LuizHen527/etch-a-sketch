@@ -7,7 +7,6 @@ let canvaWidth = 600;
 
 
 resizeButton.addEventListener("click", () => {
-
     let size;
 
     size = askGridSize();
@@ -26,10 +25,7 @@ resizeButton.addEventListener("click", () => {
 
 function makeGrid(canvaBlockSize, canvaWidth) {
     
-    let blockWidth = canvaWidth / canvaBlockSize;
-
-    console.log(`${blockWidth} = ${canvaWidth} / ${canvaBlockSize}`);
-    
+    let blockWidth = canvaWidth / canvaBlockSize; 
 
     for (let rowIndex = 0; rowIndex < canvaBlockSize; rowIndex++) {
         rowDiv = document.createElement("div");
@@ -55,7 +51,6 @@ function makeGrid(canvaBlockSize, canvaWidth) {
 }
 
 function removeCurrentGrid() {
-
     while (canvasDiv.lastChild) {
         canvasDiv.removeChild(canvasDiv.lastChild);
     }
