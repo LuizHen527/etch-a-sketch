@@ -1,3 +1,5 @@
+const canvasDiv = document.querySelector(".canvas");
+
 let rows = [];
 let rowDiv;
 let blockItem;
@@ -6,13 +8,15 @@ let blockItem;
 for (let rowIndex = 0; rowIndex < 16; rowIndex++) {
     rowDiv = document.createElement("div");
 
-    for (let blockIndex; blockIndex < 16; blockIndex++) {
+    rowDiv.className = "row-div";
+
+    for (let blockIndex = 0; blockIndex < 16; blockIndex++) {
         blockItem = document.createElement("div");
+
+        blockItem.textContent = String(blockIndex);
 
         rowDiv.appendChild(blockItem);
     }
     
-    rows.push(rowDiv);
+    canvasDiv.appendChild(rowDiv);
 }
-
-console.log(rows);
