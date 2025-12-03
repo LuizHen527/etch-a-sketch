@@ -8,7 +8,18 @@
 
 .canvas {
     display: flex;
+    flex-direction: column;
 }
 
-.canvas .row-div {
+.row-div {
+    display: flex;
+}
+
+.row-div div {
+    width: 30px;
+    height: 30px;
+}
+
+.row-div div:hover {
+    background-color: aqua;
 }
