@@ -13,8 +13,6 @@ for (let rowIndex = 0; rowIndex < 16; rowIndex++) {
     for (let blockIndex = 0; blockIndex < 16; blockIndex++) {
         blockItem = document.createElement("div");
 
-        blockItem.textContent = String(blockIndex);
-
         rowDiv.appendChild(blockItem);
     }
     
