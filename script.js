@@ -39,7 +39,8 @@ function makeGrid(canvaBlockSize, canvaWidth) {
             blockItem.style.height = `${blockWidth}px`;
     
             blockItem.addEventListener("mouseenter", () => {
-                blockItem.style.backgroundColor = 'blue';
+                
+                blockItem.style.backgroundColor = randomColors();
             })
     
             rowDiv.appendChild(blockItem);
@@ -72,6 +73,19 @@ function askGridSize() {
     }
 
     return size;
+}
+
+function randomColors() {
+    const MAX_COLOR_VALUE = 255;
+    let colorCode;
+
+    let red = Math.floor(Math.random() * MAX_COLOR_VALUE);
+    let green = Math.floor(Math.random() * MAX_COLOR_VALUE);
+    let blue = Math.floor(Math.random() * MAX_COLOR_VALUE);
+
+    colorCode = `rgb(${red}, ${green}, ${blue})`;
+
+    return colorCode;
 }
 
 
