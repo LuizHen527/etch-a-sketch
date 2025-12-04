@@ -1,6 +1,10 @@
 # Odin Project - Etch-a-Sketch
 
-This is a project made to the [Odin Project Foundations Path](https://www.theodinproject.com/lessons/foundations-etch-a-sketch). Status: In progress.
+This is a project made to the [Odin Project Foundations Path](https://www.theodinproject.com/lessons/foundations-etch-a-sketch). Status: Completed.
+
+## Screenshot
+
+![Web site screen gif](./assets/etch-sketch-screen.gif)
 
 ## About
 
